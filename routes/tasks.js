@@ -1,14 +1,14 @@
-const { v4: uuidv4 } = require('uuid');
-const dayjs = require('dayjs');
+const { v4: uuidv4 } = require('uuid')
+const dayjs = require('dayjs')
 
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
 
 /* GET tasks. */
 router.get('/', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json')
-  res.send(JSON.stringify(taskData));
-});
+  res.send(JSON.stringify(taskData))
+})
 
 let taskData = [
   {
@@ -47,6 +47,6 @@ let taskData = [
     "enteredDate": dayjs().format('YYYY-MM-DD'),
     "completionDate": null
   }
-];
+]
 
-module.exports = { router, taskData };
+module.exports = { router, taskData }

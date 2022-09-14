@@ -1,9 +1,9 @@
-const { v4: uuidv4 } = require('uuid');
-const dayjs = require('dayjs');
-const { taskData } = require('./tasks');
+const { v4: uuidv4 } = require('uuid')
+const dayjs = require('dayjs')
+const { taskData } = require('./tasks')
 
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
 
 /* POST task by Id. */
 router.post('/', function(req, res, next) {
@@ -35,11 +35,20 @@ router.put('/', function(req, res, next) {
     completionDate: req.body.completionDate
   }
 
-  let taskIndex = taskData.findIndex(t => t.id.toLowerCase() == taskToUpdate.id.toLowerCase());
+  let taskIndex = taskData.findIndex(t => t.id.toLowerCase() == taskToUpdate.id.toLowerCase())
   taskData.splice(taskIndex, 1, taskToUpdate)
 
   res.setHeader('Content-Type', 'application/json')
   res.send(JSON.stringify({ numberOfRecordsUpdated: 1 }))
 });
+
+/* DELETE task by Id. */
+router.delete('/', function(req, res, next) {
+  let taskIndex = taskData.findIndex(t => t.id.toLowerCase() == req.query.taskId.toLowerCase())
+  taskData.splice(taskIndex, 1)
+
+  res.setHeader('Content-Type', 'application/json')
+  res.send(JSON.stringify({ numberOfRecordsDeleted: 1 }))
+})
 
 module.exports = router;
