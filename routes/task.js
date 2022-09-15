@@ -5,7 +5,7 @@ const { taskData } = require('./tasks')
 var express = require('express')
 var router = express.Router()
 
-/* POST task by Id. */
+/* POST task by Task Id. */
 router.post('/', function(req, res, next) {
   let taskToAdd = {
     id: uuidv4(), 
@@ -23,7 +23,7 @@ router.post('/', function(req, res, next) {
   res.send(JSON.stringify({ numberOfRecordsInserted: 1 }))
 })
 
-/* PUT task by Id. */
+/* PUT task by Task Id. */
 router.put('/', function(req, res, next) {
   let taskToUpdate = {
     id: req.body.id, 
@@ -42,7 +42,7 @@ router.put('/', function(req, res, next) {
   res.send(JSON.stringify({ numberOfRecordsUpdated: 1 }))
 });
 
-/* DELETE task by Id. */
+/* DELETE task by Task Id. */
 router.delete('/', function(req, res, next) {
   let taskIndex = taskData.findIndex(t => t.id.toLowerCase() == req.query.taskId.toLowerCase())
   taskData.splice(taskIndex, 1)
