@@ -18,7 +18,7 @@ let taskData = [
     "points": 5,
     "isCompleted": true,
     "enteredDate": dayjs().subtract(2, 'day').format('YYYY-MM-DD'),
-    "completionDate": dayjs().subtract(0, 'day').format('YYYY-MM-DD')
+    "completionDate": dayjs().subtract(2, 'day').format('YYYY-MM-DD')
   },
   {
     "id": uuidv4(),
@@ -27,7 +27,7 @@ let taskData = [
     "points": 3,
     "isCompleted": true,
     "enteredDate": dayjs().subtract(2, 'day').format('YYYY-MM-DD'),
-    "completionDate": dayjs().subtract(0, 'day').format('YYYY-MM-DD')
+    "completionDate": dayjs().subtract(1, 'day').format('YYYY-MM-DD')
   },
   {
     "id": uuidv4(),

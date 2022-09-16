@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
   taskData.push(taskToAdd)
 
   res.setHeader('Content-Type', 'application/json')
-  res.send(JSON.stringify({ numberOfRecordsInserted: 1 }))
+  res.send(JSON.stringify({ numberOfRecordsCreated: 1 }))
 })
 
 /* PUT task by Task Id. */
