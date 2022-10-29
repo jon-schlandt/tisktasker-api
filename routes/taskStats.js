@@ -31,9 +31,9 @@ let taskStatData = [
   {
     "userId": 0,
     "avatarUrl": null,
-    "fullName": "Elon Kush",
+    "fullName": "Elon Mush",
     "totalTasks": 7,
-    "totalPoints": 420
+    "totalPoints": 27
   },
   {
     "userId": 1, 
