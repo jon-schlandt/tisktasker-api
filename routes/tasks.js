@@ -13,8 +13,8 @@ router.get('/', function(req, res, next) {
 let taskData = [
   {
     "id": uuidv4(),
-    "title": "Did stuff",
-    "description": "Did the stuff until it was done.",
+    "title": "Brainstorm app ideas",
+    "description": "Let's get creative!",
     "points": 5,
     "isCompleted": true,
     "enteredDate": dayjs().subtract(2, 'day').format('YYYY-MM-DD'),
@@ -22,8 +22,8 @@ let taskData = [
   },
   {
     "id": uuidv4(),
-    "title": "Did more stuff",
-    "description": "Did even more stuff until it was done.",
+    "title": "Settle on a tasking app",
+    "description": "Reminders is just an inspo.",
     "points": 3,
     "isCompleted": true,
     "enteredDate": dayjs().subtract(2, 'day').format('YYYY-MM-DD'),
@@ -31,8 +31,8 @@ let taskData = [
   },
   {
     "id": uuidv4(),
-    "title": "Do stuff",
-    "description": "Do the thing until it is done.",
+    "title": "Buy Bitcoin",
+    "description": "Got a good feeling this time.",
     "points": 5,
     "isCompleted": false,
     "enteredDate": dayjs().format('YYYY-MM-DD'),
@@ -40,8 +40,8 @@ let taskData = [
   },
   {
     "id": uuidv4(),
-    "title": "Do more stuff",
-    "description": "Keep doing more stuff until the thing is done.",
+    "title": "Clean the car",
+    "description": "Time to clean off last year's snow.",
     "points": 3,
     "isCompleted": false,
     "enteredDate": dayjs().format('YYYY-MM-DD'),
