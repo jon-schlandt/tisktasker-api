@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   res.send(JSON.stringify(userStats))
 })
 
-/* UPDATE task stats by User Id. */
+/* PUT task stats by User Id. */
 router.put('/', function(req, res, next) {
   let taskStatsToUpdate = {
     userId: req.body.userId, 
