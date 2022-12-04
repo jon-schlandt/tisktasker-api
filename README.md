@@ -93,7 +93,7 @@ The number of records deleted:
 }
 ```
 
-### GET task-stats
+### GET progress
 Gets user task stat information by User Id.
 
 #### Request
@@ -114,7 +114,7 @@ User task stat information:
 }
 ```
 
-### PUT task-stats
+### PUT progress
 Updates a user's task stat information by User Id.
 
 #### Request
