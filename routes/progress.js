@@ -1,18 +1,18 @@
 var express = require('express')
 var router = express.Router()
 
-/* GET task stats by User Id. */
+/* GET progress by User Id. */
 router.get('/', function(req, res, next) {
   let userId = parseInt(req.query.userId)
-  let userStats = taskStatData.find(s => s.userId == userId)
+  let userProgress = progressData.find(s => s.userId == userId)
 
   res.setHeader('Content-Type', 'application/json')
-  res.send(JSON.stringify(userStats))
+  res.send(JSON.stringify(userProgress))
 })
 
-/* PUT task stats by User Id. */
+/* PUT progress by User Id. */
 router.put('/', function(req, res, next) {
-  let taskStatsToUpdate = {
+  let progressToUpdate = {
     userId: req.body.userId, 
     avatarUrl: req.body.avatarUrl,
     fullName: req.body.fullName, 
@@ -20,18 +20,18 @@ router.put('/', function(req, res, next) {
     totalPoints: req.body.totalPoints
   }
 
-  let taskStatsIndex = taskStatData.findIndex(t => t.userId == taskStatsToUpdate.userId)
-  taskStatData.splice(taskStatsIndex, 1, taskStatsToUpdate)
+  let progressIndex = progressData.findIndex(t => t.userId == progressToUpdate.userId)
+  progressData.splice(progressIndex, 1, progressToUpdate)
 
   res.setHeader('Content-Type', 'application/json')
   res.send(JSON.stringify({ numberOfRecordsUpdated: 1 }))
 })
 
-let taskStatData = [
+let progressData = [
   {
     "userId": 0,
     "avatarUrl": null,
-    "fullName": "Elon Mush",
+    "fullName": "Erling Haaland",
     "totalTasks": 7,
     "totalPoints": 27
   },
